@@ -16,26 +16,26 @@ P. 1049, Challenge 3, Fraction Calculator Program, Week 7
 using namespace std;
 
 //Function Prototypes
-void welcomeUser();															//to welcome user
-int welcomeMenu();															//menu selection
-int integerInput();															//to get integer and validate from the user for numerator
-int integerDenomInput();													//to get integer and validate from the user for denominator
-int gcd(int, int);															//calculate greatest common divisor
-void reduce(int&, int&);													//reduce fraction
-void addFractions(int, int, int, int, int*, int*);							//addition of fractions
+void welcomeUser();										//to welcome user
+int welcomeMenu();										//menu selection
+int integerInput();										//to get integer and validate from the user for numerator
+int integerDenomInput();									//to get integer and validate from the user for denominator
+int gcd(int, int);										//calculate greatest common divisor
+void reduce(int&, int&);									//reduce fraction
+void addFractions(int, int, int, int, int*, int*);						//addition of fractions
 void subtractFractions(int, int, int, int, int*, int*);						//subtraction of fractions
 void multiplyFractions(int, int, int, int, int*, int*);						//multiplication of fractions
 
 int main()
 {
-	char runAgain = 'Y';													//initialize variable to run program again, default to yes to start
-	int menuSelection = 0;													//initialize menuSelection variable
+	char runAgain = 'Y';									//initialize variable to run program again, default to yes to start
+	int menuSelection = 0;									//initialize menuSelection variable
 	int denomOne = 0, denomTwo = 0, numerOne = 0, numerTwo = 0;				//initialize denominators and numerators
-	int denomThree = 0, numerThree = 0;										//initialize integer pointers to hold arithmetic solution
+	int denomThree = 0, numerThree = 0;							//initialize integer pointers to hold arithmetic solution
 
-	welcomeUser();															//call introduction function
+	welcomeUser();										//call introduction function
 
-	while (toupper(runAgain) == 'Y')										//while 'Y', run program, else quits
+	while (toupper(runAgain) == 'Y')							//while 'Y', run program, else quits
 
 	{		
 		menuSelection = welcomeMenu();
@@ -66,7 +66,7 @@ int main()
 			cout << endl;
 		}
 
-		if (menuSelection == 1)												//addition
+		if (menuSelection == 1)											//addition
 		{
 			cout << numerOne << "/" << denomOne << " + " << numerTwo << "/" << denomTwo << " = ";
 			
@@ -98,7 +98,7 @@ int main()
 
 		if (menuSelection > 0 && menuSelection < 5)
 		{
-			cout << numerThree << " / " << denomThree << endl << endl;			//print the result
+			cout << numerThree << " / " << denomThree << endl << endl;					//print the result
 		}
 
 	}
