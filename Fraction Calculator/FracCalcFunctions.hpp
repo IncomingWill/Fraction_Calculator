@@ -167,15 +167,15 @@ void reduce(int& num, int& den)
 
 void addFractions(int num1, int den1, int num2, int den2, int* num3, int* den3)
 {
-	int d = gcd(den1, den2);												//calculate gcd
+	int d = gcd(den1, den2);									//calculate gcd
 
-	d = (den1 * den2) / d;													//calculate lcm
+	d = (den1 * den2) / d;										//calculate lcm
 
 	int n = (num1 * (d / den1)) + (num2 * (d / den2));						//calculate numerator
 
-	reduce(n, d);															//reduce fraction
+	reduce(n, d);											//reduce fraction
 
-	*num3 = n;																//store in pointer to return multiple values
+	*num3 = n;											//store in pointer to return multiple values
 	*den3 = d;
 }
 
@@ -184,9 +184,9 @@ void addFractions(int num1, int den1, int num2, int den2, int* num3, int* den3)
 
 void subtractFractions(int num1, int den1, int num2, int den2, int* num3, int* den3)
 {
-	int d = gcd(den1, den2);												//calculate gcd
+	int d = gcd(den1, den2);									//calculate gcd
 
-	d = (den1 * den2) / d;													//calculate lcm
+	d = (den1 * den2) / d;										//calculate lcm
 
 	int n = (num1 * (d / den1)) - (num2 * (d / den2));						//calculate numerator
 
@@ -205,8 +205,8 @@ void subtractFractions(int num1, int den1, int num2, int den2, int* num3, int* d
 
 void multiplyFractions(int num1, int den1, int num2, int den2, int* num3, int* den3)
 {
-	int n = num1 * num2;													//calculate numerator
-	int d = den1 * den2;													//calculate denominator
+	int n = num1 * num2;										//calculate numerator
+	int d = den1 * den2;										//calculate denominator
 
 	reduce(n, d);
 
